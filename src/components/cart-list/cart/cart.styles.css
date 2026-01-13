@@ -1,0 +1,51 @@
+/* ===== Card ===== */
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #95dada;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 25px;
+  cursor: pointer;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+}
+
+.cart-container img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.cart-container:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Laptop (<= 1200px) ===== */
+@media screen and (max-width: 1200px) {
+  .cart-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===== Tablet (<= 900px) ===== */
+@media screen and (max-width: 900px) {
+  .cart-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== Mobile (<= 600px) ===== */
+@media screen and (max-width: 600px) {
+  .cart-list {
+    grid-template-columns: 1fr;
+    width: 95vw;
+  }
+
+  .cart-container {
+    padding: 20px;
+  }
+}
